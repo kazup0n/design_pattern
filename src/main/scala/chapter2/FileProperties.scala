@@ -11,7 +11,7 @@ class FileProperties()  extends FileIO{
   
   def getValue(key:String):String = properties.getProperty(key)
   def setValue(key:String, value:String) = properties.put(key, value)
-  def writeToFile(filename:String) = properties.save(new FileOutputStream(new File(filename)), "")
+  def writeToFile(filename:String) = properties.store(new FileOutputStream(new File(filename)), "")
   def readFromFile(filename:String) = properties.load(getClass().getClassLoader().getResourceAsStream(filename))
   
   
