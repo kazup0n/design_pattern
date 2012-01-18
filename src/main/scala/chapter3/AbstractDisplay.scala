@@ -8,10 +8,10 @@ abstract class AbstractDisplay {
 	  println(close())
   }
 	
-  def print():String
+  private[chapter3] def print():String
   
-  def close():String
+  private[chapter3] def close():String
 	
-  def open():String
+  private[chapter3] def open():String
   
 }
