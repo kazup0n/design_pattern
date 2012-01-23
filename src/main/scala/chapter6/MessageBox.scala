@@ -2,7 +2,7 @@ package chapter6
 
 import chapter6.framework.Product
 
-class MessageBox(decochar:Char) extends Product {
+class MessageBox(decochar:Char) extends AbstractProduct {
 
   def use(s:String): Unit = {
     val length = s.getBytes().length
@@ -10,7 +10,4 @@ class MessageBox(decochar:Char) extends Product {
     println(decochar + " " + s + " " + decochar)
     println(String.valueOf(decochar) * (length + 4))
   }
-
-  def createClone(): Product = clone().asInstanceOf[MessageBox]
-
 }
