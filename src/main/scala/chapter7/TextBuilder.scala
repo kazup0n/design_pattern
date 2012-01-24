@@ -4,7 +4,7 @@ import scala.collection.immutable.List
 
 class TextBuilder extends Builder {
   val builder = new StringBuilder()
-  def makeTitle(title: String): Unit = {
+  override def makeTitle(title: String): Unit = {
     builder.append("===========================================")
     builder.append("「"+ title + "」\n")
     builder.append("\n")

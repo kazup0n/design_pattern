@@ -25,5 +25,15 @@ class TestBuilder extends JUnitSuite with ShouldMatchersForJUnit{
 	  println(builder.getResult())
 	}
 	
+	@Test(expected=classOf[AssertionError])
+	def testOrderedHTMLBuilder(){
+	  (new HTMLBuilder() with OrderedBuilder).makeItems(List("",""))
+	}
+	
+	@Test(expected=classOf[AssertionError])
+	def testOrderedTextBuilder(){
+	  (new TextBuilder() with OrderedBuilder).makeItems(List("",""))
+	} 
+
 	
 }
