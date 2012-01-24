@@ -1,6 +1,6 @@
 package chapter7
 
-abstract class Builder {
+trait Builder {
 
   def makeTitle(title:String)
   def makeString(str:String)
