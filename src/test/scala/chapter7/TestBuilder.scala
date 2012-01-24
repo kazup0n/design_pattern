@@ -19,6 +19,12 @@ class TestBuilder extends JUnitSuite with ShouldMatchersForJUnit{
 	  executeBuilder(new HTMLBuilder())
 	}
 	
+	@Test
+	def testWikiBuilder() {
+	  executeBuilder(new WikiBuilder())
+	}
+	
+	
 	private def executeBuilder(builder:Builder){
 	  val director = new Director(builder)
 	  director.construct()
